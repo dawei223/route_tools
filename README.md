@@ -5,3 +5,6 @@ cnip.sh
 
 veth.sh
 防止连续多拨失败。
+
+etc_config_network
+macvlan的多拨范本。
