@@ -10,4 +10,4 @@ etc_config_network
 macvlan的多拨范本。
 
 steamsv.sh
-由于steams是动态IP，做一个检测IP更新的脚本，更新dnsmasq内的IP，用于解锁NF。
+由于steamsv是动态IP，做一个检测IP更新的脚本，更新dnsmasq内的IP，用于解锁NF。
