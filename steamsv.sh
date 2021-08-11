@@ -13,12 +13,10 @@ ndnsunlock=`cat /tmp/new.dnsunlock.com`
 if [ -z "$ndnsunlock" ];then
 #    echo "can't connect"
     rm /tmp/new.dnsunlock.com
-    exit 0
 #两次获取IP对比.
 elif
     [ "$odnsunlock" = "$ndnsunlock" ]; then
 #    echo "same ip"
-    exit 0
 #判断IP更新后.
 else
 #    echo "ip different"
@@ -26,5 +24,5 @@ else
     mv /tmp/new.dnsunlock.com /etc/config/old.dnsunlock.com
     sed -i "s/$odnsunlock/$ndnsunlock/g" /www/dnsmasq/dns_user.conf
     /etc/init.d/dnsmasq restart
-    exit 0
 fi
+exit 0
