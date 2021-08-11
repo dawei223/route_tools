@@ -8,7 +8,6 @@ odnsunlock=`cat /etc/config/old.dnsunlock.com`
 ping -c 1 tw2.dnsunlock.com | head -2 | tail -1 | awk '{print $4}' | sed 's/[(:)]//g' > /tmp/new.dnsunlock.com
 ndnsunlock=`cat /tmp/new.dnsunlock.com`
 #echo "$ndnsunlock"
-
 #字符串为空.就是长度为0.
 if [ -z "$ndnsunlock" ];then
 #    echo "can't connect"
