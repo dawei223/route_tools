@@ -1,12 +1,12 @@
 #!/bin/sh
 #读取上一次查询的IP地址
-odnsunlock='cat /etc/config/old.dnsunlock.com'
+odnsunlock=`cat /etc/config/old.dnsunlock.com`
 #echo "$odnsunlock"
 #写入本次次查询的IP地址
 #ping -c 1 hk1.dnsunlock.com | head -2 | tail -1 | awk '{print $4}' | sed 's/[(:)]//g' > /tmp/new.dnsunlock.com
 #ping -c 1 tw1.dnsunlock.com | head -2 | tail -1 | awk '{print $4}' | sed 's/[(:)]//g' > /tmp/new.dnsunlock.com
 ping -c 1 tw2.dnsunlock.com | head -2 | tail -1 | awk '{print $4}' | sed 's/[(:)]//g' > /tmp/new.dnsunlock.com
-ndnsunlock='cat /tmp/new.dnsunlock.com'
+ndnsunlock=`cat /tmp/new.dnsunlock.com`
 #echo "$ndnsunlock"
 
 #字符串为空.就是长度为0.
