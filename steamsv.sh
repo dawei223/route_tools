@@ -16,6 +16,7 @@ if [ -z "$ndnsunlock" ];then
 elif
     [ "$odnsunlock" = "$ndnsunlock" ]; then
     echo "same ip"
+    rm /tmp/new.dnsunlock.com
 #判断IP更新后.
 else
     echo "ip different"
