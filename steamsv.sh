@@ -27,5 +27,6 @@ else
 fi
 exit 0
 
-计划任务中添加（意思是一分钟运行一次）
+计划任务中添加
 * * * * * /etc/config/steamsv.sh > /tmp/steamsv.log
+*/5 * * * * /etc/config/steamsv.sh > /tmp/steamsv.log
