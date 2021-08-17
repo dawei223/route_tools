@@ -14,13 +14,13 @@ else
 fi
 if
  [ "$localdalm" = "$onlinedalm" ]; then
- cat /tmp/delegated-apnic-latest.md5.online | awk '{print $4}' > /etc/config/delegated-apnic-latest.md5.old
  rm /etc/config/chinaip.sh
  cat /tmp/delegated-apnic-latest | awk -F '|' '/CN/&&/ipv4/ {print $4 "/" 32-log($5)/log(2)}' | tee /etc/config/chinaip.sh
 # sed -i "/./{s/^/&route /;s/$/& net_gateway/}" chinaiplist.txt
  sed -i "s/^/&ipset add chinaip /" /etc/config/chinaip.sh
  sed -i "1 i\ipset create chinaip hash:net hashsize 10240" /etc/config/chinaip.sh
  chmod 775 /etc/config/chinaip.sh
+ cat /tmp/delegated-apnic-latest.md5.online | awk '{print $4}' > /etc/config/delegated-apnic-latest.md5.old
  rm /tmp/delegated-apnic-latest.md5.online
  rm /tmp/delegated-apnic-latest.md5.local
  rm /tmp/delegated-apnic-latest
