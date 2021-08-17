@@ -28,3 +28,6 @@ if
 # reboot
 fi
 exit 0
+
+
+0 3 * * 1 root /etc/config/cnip.sh > /tmp/cnip.log
