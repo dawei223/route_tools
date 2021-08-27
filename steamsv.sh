@@ -12,6 +12,7 @@ echo "$ndnsunlock"
 if [ -z "$ndnsunlock" ];then
     echo "can't connect"
     rm /tmp/new.dnsunlock.com
+    /etc/init.d/dnsmasq restart
 #两次获取IP对比.
 elif
     [ "$odnsunlock" = "$ndnsunlock" ]; then
