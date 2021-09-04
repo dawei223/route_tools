@@ -26,6 +26,8 @@ if
  rm /tmp/delegated-apnic-latest
  echo "same md5 update"
 # reboot
+ ipset flush chinaip
+ /etc/config/chinaip.sh
 fi
 exit 0
 
