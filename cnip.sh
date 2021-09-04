@@ -31,3 +31,5 @@ exit 0
 
 
 0 3 * * 1 root /etc/config/cnip.sh > /tmp/cnip.log
+
+0 3 * * * . /etc/profile; /etc/config/cnip.sh
